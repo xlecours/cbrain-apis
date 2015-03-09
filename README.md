@@ -11,7 +11,10 @@ Two languages are currently supported:
 
 The full documention about these APIs can be generated locally
 by running a bash script provided at the top of the repository,
-``install_doc.sh``.
+``install_doc.sh``. It can also be browsed online at the
+CBRAIN service site:
+
+[CBRAIN APIs documentation](https://portal.cbrain.mcgill.ca/service/doc)
 
 ## Credits
 
