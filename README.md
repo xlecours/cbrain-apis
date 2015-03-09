@@ -19,6 +19,6 @@ CBRAIN service site:
 ## Credits
 
 This project's code was originally a part of the CBRAIN platform
-(released separately), but the API itself was funded by CANARIE
+(released separately), but the API itself was funded by [CANARIE](http://www.canarie.ca/)
 during the summer of 2014.
 
