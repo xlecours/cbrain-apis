@@ -42,9 +42,7 @@ require 'json'
 #   require 'cbrain_ruby_api'
 #
 #   # Create our API user agent
-#   agent = CbrainRubyAPI.new(
-#      :cbrain_server_url => "https://example.com:abcd/",
-#   )
+#   agent = CbrainRubyAPI.new( "https://example.com:abcd/" )
 #
 #   # Login
 #   agent.login("username","my*Pass*Word")
