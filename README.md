@@ -1,8 +1,7 @@
 
 ## CBRAIN APIs
 
-This repository contains libraries for accessing the CBRAIN
-platform.
+This repository contains libraries for accessing the [CBRAIN platform](https://github.com/aces/cbrain). One particular instance of this platform is the Montreal Neurological Institute's [CBRAIN Service](https://portal.cbrain.mcgill.ca/).
 
 Two languages are currently supported:
 
