@@ -20,7 +20,7 @@ fi
 BASE_DOC="$1"
 
 # Run this script where it is.
-if ! test -d "ruby" -a -d "perl" -a -d "java" ; then
+if ! test -d "ruby" -a -d "perl" ; then
    echo "Error: this script should be run from the directory where the CBRAIN APIs are located."
    exit 20
 fi
