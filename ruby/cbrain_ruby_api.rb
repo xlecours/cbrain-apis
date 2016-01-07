@@ -35,7 +35,9 @@ require 'json'
 # The CbrainRubyAPI class is a Ruby class that provides a simple
 # user agent for connecting to CBRAIN portal servers.
 #
+# == DEPENDENCIES
 #
+#  gem install multipart-post
 #
 # == SIMPLE USAGE
 #
@@ -441,9 +443,8 @@ class CbrainRubyAPI
   # Returns an array of hash tables describing the DataProviders.
   def index_data_providers(filters={})
     prep_req(:get, "/data_providers")
+    add_params(:_simple_filters  => 1)
     add_params(filters)
-    add_params(:update_filter => :filter_hash)
-    add_params(:clear_filter  => :filter_hash)
 
     request()
     return nil if request_has_failed?("Cannot list DataProviders")
@@ -562,9 +563,8 @@ class CbrainRubyAPI
   # Returns an array of hash tables describing the CBRAIN userfiles.
   def index_userfiles(filters={})
     prep_req(:get, "/userfiles")
+    add_params(:_simple_filters  => 1)
     add_params(filters)
-    add_params(:update_filter => :filter_hash)
-    add_params(:clear_filter  => :filter_hash)
 
     request()
     return nil if request_has_failed?("Cannot list userfiles")
@@ -933,10 +933,9 @@ class CbrainRubyAPI
   # Returns an array of hash tables describing the Execution Servers.
   def index_bourreaux(filters={})
     prep_req(:get, "/bourreaux")
+    add_params(:_simple_filters  => 1)
     add_params(filters)
     add_params(:type => "Bourreau") if !filters[:type].present? # For the moment in order to exclude Portal
-    add_params(:update_filter => :filter_hash)
-    add_params(:clear_filter  => :filter_hash)
 
     request()
     return nil if request_has_failed?("Cannot list bourreaux")
@@ -1059,9 +1058,8 @@ class CbrainRubyAPI
   # Returns an array of hash tables describing the users.
   def index_users(filters = {})
     prep_req(:get, "/users")
+    add_params(:_simple_filters  => 1)
     add_params(filters)
-    add_params(:update_filter => :filter_hash)
-    add_params(:clear_filter  => :filter_hash)
 
     request()
     return nil if request_has_failed?("Cannot get users")
@@ -1180,9 +1178,8 @@ class CbrainRubyAPI
   # Returns an array of hash tables describing the tasks.
   def index_tasks(filters = {})
     prep_req(:get, "/tasks")
+    add_params(:_simple_filters  => 1)
     add_params(filters)
-    add_params(:update_filter => :filter_hash)
-    add_params(:clear_filter  => :filter_hash)
 
     request()
     return nil if request_has_failed?("Cannot get tasks")
