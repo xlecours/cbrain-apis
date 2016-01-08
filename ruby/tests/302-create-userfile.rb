@@ -26,7 +26,7 @@ orig_dp_dir = orig_dp["remote_dir"]
 @userfile_name_302 = "api_mytest1.#{Process.pid}.txt"
 full_path          = "#{orig_dp_dir}/#{@userfile_name_302}"
 @one_line_302      = "This is a test of file creation! #{Process.pid}\n"
-long_text          = @one_line_302 * 200
+long_text          = @one_line_302 * 500
 File.open(full_path,"w") { |fh| fh.write(long_text) }
 @userfile_size_302 = File.size(full_path)
 
