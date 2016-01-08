@@ -33,7 +33,7 @@ our $userfile_ids = {};
 our $userfile_name_302 = "api_mytest1.$$.txt";
 my  $full_path         = "$orig_dp_dir/$userfile_name_302";
 our $one_line_302      = "This is a test of file creation! $$\n";
-my  $long_text         = $one_line_302 x 200;
+my  $long_text         = $one_line_302 x 2000;
 
 open  (MYFILE, ">>$full_path");
 print  MYFILE "$long_text";

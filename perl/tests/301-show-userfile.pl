@@ -13,7 +13,7 @@ if ($DEBUG) {
 
 die "Value returned not an hash.\n" unless defined($file_info) && ref($file_info) eq "HASH";
 die "You have no information for your userfile\n" if scalar(%$file_info) eq "0";
-die "You have no entry for log"                   unless exists $file_info->{"log"};
+die "You have no entry for userfile_log"          unless exists $file_info->{"userfile_log"};
 die "You have no entry for syncstatus"            unless exists $file_info->{"remote_sync_status"};
 die "You have no entry for parent_id"             unless exists $file_info->{"parent_id"};
 die "You have no entry for children_ids"          unless exists $file_info->{"children_ids"};

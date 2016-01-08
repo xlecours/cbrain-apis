@@ -556,8 +556,7 @@ sub index_data_providers {
   $self->prep_req(GET => "/data_providers");
   if ($filters && ref($filters) eq "HASH") {
       $self->add_params($filters);
-      $self->add_params({"update_filter" => "filter_hash"});
-      $self->add_params({"clear_filter"  => "filter_hash"});
+      $self->add_params({"_simple_filters" => "1"});
   }
 
   $self->request();
@@ -738,8 +737,7 @@ sub index_userfiles {
   $self->prep_req(GET => "/userfiles");
   if ($filters && ref($filters) eq "HASH") {
       $self->add_params($filters);
-      $self->add_params({"update_filter" => "filter_hash"});
-      $self->add_params({"clear_filter"  => "filter_hash"});
+      $self->add_params({"_simple_filters" => "1"});
   }
 
   $self->request();
@@ -1235,8 +1233,7 @@ sub index_bourreaux {
       $self->add_params($filters);
       $self->add_params("type" => "Bourreau") if !defined($filters->{"type"});
 
-      $self->add_params({"update_filter" => "filter_hash"});
-      $self->add_params({"clear_filter"  => "filter_hash"});
+      $self->add_params({"_simple_filters" => "1"});
   }
 
   $self->request();
@@ -1412,8 +1409,7 @@ sub index_users {
   $self->prep_req(GET => "/users");
   if ($filters && ref($filters) eq "HASH") {
       $self->add_params($filters);
-      $self->add_params({"update_filter" => "filter_hash"});
-      $self->add_params({"clear_filter"  => "filter_hash"});
+      $self->add_params({"_simple_filters" => "1"});
   }
 
   $self->request();
@@ -1593,8 +1589,7 @@ sub index_tasks {
   $self->prep_req(GET => "/tasks");
   if ($filters && ref($filters) eq "HASH") {
       $self->add_params($filters);
-      $self->add_params({"update_filter" => "filter_hash"});
-      $self->add_params({"clear_filter"  => "filter_hash"});
+      $self->add_params({"_simple_filters" => "1"});
   }
 
   $self->request();

@@ -8,8 +8,8 @@ our $userfile_ids;
 
 die "SKIPPED: You have no userfile to handle"             unless defined($userfile_id_302);
 die "SKIPPED: You have no information about file content" unless defined($one_line_302);
-die "SKIPPED: Do no have size of the originale file"      unless defined($userfile_size_302);
-die "SKIPPED: Do no have userfiles ids"                   unless defined($userfile_ids);
+die "SKIPPED: Do not have size of the original file"       unless defined($userfile_size_302);
+die "SKIPPED: Do not have userfiles ids"                   unless defined($userfile_ids);
 
 ######################################
 # Download file (download_userfiles) #

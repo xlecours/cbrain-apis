@@ -13,7 +13,7 @@ if ($DEBUG) {
 
 die "Value returned not an hash.\n" unless defined($bourreau_disk_cache_report_info) && ref($bourreau_disk_cache_report_info) eq "HASH";
 my $admin_id = $admin->session_status();
-die "Value returned don't contain expected value.\n" unless $bourreau_disk_cache_report_info->{"${admin_id}"}->{"number_entries"};
+die "Value returned don't contain expected value.\n" unless $bourreau_disk_cache_report_info->{"${admin_id}"}->{"number_entries"} =~ m/^\d+$/;
 
 
 1;
