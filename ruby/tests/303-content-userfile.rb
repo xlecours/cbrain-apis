@@ -1,7 +1,7 @@
 admin = admin_handle
 raise "SKIPPED: You have no userfile to handle"             unless @userfile_id_302.present?
 raise "SKIPPED: You have no information about file content" unless @one_line_302.present?
-raise "SKIPPED: Do no have size of the originale file"      unless @userfile_size_302.present?
+raise "SKIPPED: Do not have size of the original file"     unless @userfile_size_302.present?
 
 ##################################
 # Stream file (content_userfile) #

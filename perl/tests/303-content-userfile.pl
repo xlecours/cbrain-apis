@@ -5,7 +5,7 @@ our $userfile_size_302;
 
 die "SKIPPED: You have no userfile to handle"             unless defined($userfile_id_302);
 die "SKIPPED: You have no information about file content" unless defined($one_line_302);
-die "SKIPPED: Do no have size of the originale file"      unless defined($userfile_size_302);
+die "SKIPPED: Do not have size of the original file"      unless defined($userfile_size_302);
 
 ##################################
 # Stream file (content_userfile) #
