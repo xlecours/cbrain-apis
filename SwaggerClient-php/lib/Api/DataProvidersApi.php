@@ -229,8 +229,7 @@ class DataProvidersApi
                 null,
                 '/data_providers/{id}/browse'
             );
-
-            return [null, $statusCode, $httpHeader];
+            return [$response, $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
             }

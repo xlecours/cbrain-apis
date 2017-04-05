@@ -178,11 +178,19 @@ class Configuration
     protected $proxyPassword;
 
     /**
+     * Curl cookie file
+     *
+     * @var string
+     */
+    protected $cookieFile;
+
+    /**
      * Constructor
      */
     public function __construct()
     {
         $this->tempFolderPath = sys_get_temp_dir();
+        $this->setCookieFile( $this->tempFolderPath . '/' . (String)time() . '.cbrain' );
     }
 
     /**
@@ -682,6 +690,16 @@ class Configuration
     public static function setDefaultConfiguration(Configuration $config)
     {
         self::$defaultConfiguration = $config;
+    }
+
+    public function getCookieFile() 
+    {
+        return $this->cookieFile;
+    }
+
+    public function setCookieFile($filename) 
+    {
+        $this->cookieFile = $filename;
     }
 
     /**

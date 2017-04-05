@@ -179,6 +179,11 @@ class ApiClient
             curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 0);
         }
 
+        // Enable cookie
+        curl_setopt( $curl, CURLOPT_COOKIESESSION, true );
+        curl_setopt( $curl, CURLOPT_COOKIEJAR, $this->config->getCookieFile() );
+        curl_setopt( $curl, CURLOPT_COOKIEFILE, $this->config->getCookieFile() );        
+
         if ($this->config->getCurlProxyHost()) {
             curl_setopt($curl, CURLOPT_PROXY, $this->config->getCurlProxyHost());
         }
@@ -233,7 +238,6 @@ class ApiClient
         } else {
             curl_setopt($curl, CURLOPT_VERBOSE, 0);
         }
-
         // obtain the HTTP response headers
         curl_setopt($curl, CURLOPT_HEADER, 1);
 
